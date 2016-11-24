@@ -1,0 +1,178 @@
+/* RED HOVER STYLES */
+.blog-post-listing li strong:hover {
+    background-color: rgba(227, 28, 28, 0.69);
+}
+/* PRODUCT PAGE LIGHTBOX STYLES */
+div.pp_woocommerce .pp_content_container {
+    background: #222;
+}
+
+/*********** LEO CUSTOM FORM *************/
+.custom-txt {
+     width: 52%;
+    display: inline-block;
+    list-style: none;
+    float: left; 
+  margin-bottom:2%;
+  
+}
+
+.custom-txt input{
+	width:98%;
+  	padding:10px;
+}
+
+.gform_button{
+padding:10px !important;
+}
+
+.custom-desc{
+     width: 45%;
+    display: inline-block;
+    list-style: none;
+}
+
+.custom-desc textarea{
+	height:135px;
+}
+
+.gform_footer{
+text-align:right;
+  margin-right: 3%;
+}
+
+/*********** LEO CUSTOM FORM ENDS *************/
+
+div.ppt {
+    display: none !Important;
+}
+.pp_nav p {
+    color: white;
+    font-size: 12px;
+}
+/*********** SALE ICON *************/
+.woocommerce span.onsale {
+    border-radius: 10%;
+    background-color: #e31c1c;
+}
+/*********** WOOCOMMERCE ALERT *************/
+.woocommerce-message {
+    border-top-color: #292d31;
+}
+.woocommerce-message:before {
+    color: #292d31;
+}
+/*********** HOME CATEGORY IMAGES *************/
+.category-listing li h3 {
+    text-shadow: 2px 2px #292d31;
+    width: 65%;
+}
+/*********** AJAX SEARCH RESULT *************/
+.aws-search-result .aws_result_title {
+    color: #e31c1c;
+}
+.aws-search-result .aws_onsale {
+    background: #292d31 none repeat scroll 0 0;
+} 
+/*********** BLOCKQUOTES *************/
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #292d31;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+/*********** ADD TO CART SHORTCODE *************/
+p.product.woocommerce.add_to_cart_inline.post-add-cart {
+    border: 4px solid #ccc;
+    padding: 12px;
+    width: 255px;
+    margin: auto;
+}
+/*********** IMAGE CAPTION *************/
+.wp-caption .wp-caption-text {
+    margin-top: -19px;
+    text-align: left;
+    font-size: 13px;
+    margin-left: 3px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+/*********** REVIEW UL *************/
+.review-list li:last-child {
+  list-style: none;
+  margin-top: 15px;
+} 
+
+/*********** ACCOUNT PAGE BOOTSTRAP STYLING *************/
+.woocommerce-MyAccount-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.woocommerce-MyAccount-navigation li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(41, 45, 49, 0.19) !important;
+}
+.woocommerce-MyAccount-navigation li a:last-child {
+    border-bottom: 0px;
+}
+.woocommerce-MyAccount-navigation li a:hover {
+    background-color: #292d31;
+    color: white;
+}
+a.post-edit-link, .woocommerce-account .addresses .title .edit {
+    background: #e31c1c;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+a.post-edit-link:hover, .woocommerce-account .addresses .title .edit:hover {
+    background: #292d31;
+}
+/*********** SITE ALERT *************/
+.header-phone {
+    background-color: #e31c1c;
+    color: #ffffff;
+    font-size: 18px;
+}
+/*********** CART PAGE IMAGES *************/
+.woocommerce table.cart img, .woocommerce-page #content table.cart img, .woocommerce-page table.cart img {
+    height: 185px;
+    width: auto;
+}
+/*********** POST HEADING *************/
+.post-heading {
+    border-bottom: 5px solid rgb(227, 28, 28);
+    border-top: 5px solid rgb(227, 28, 28);
+}
+.post-heading .entry-title {
+    text-align: center;
+}

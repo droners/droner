@@ -1,0 +1,107 @@
+/**
+ * File skip-link-focus-fix.js.
+ *
+ * Helps with accessibility for keyboard only users.
+ *
+ * Learn more: https://git.io/vWdr2
+ */
+( function() {
+	var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+	    isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+	    isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+
+	if ( ( isWebkit || isOpera || isIe ) && document.getElementById && window.addEventListener ) {
+		window.addEventListener( 'hashchange', function() {
+			var id = location.hash.substring( 1 ),
+				element;
+
+			if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+				return;
+			}
+
+			element = document.getElementById( id );
+
+			if ( element ) {
+				if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+					element.tabIndex = -1;
+				}
+
+				element.focus();
+			}
+		}, false );
+	}
+})();
+
+
+jQuery(document).ready(function(){
+    // This button will increment the value
+    jQuery('.qtyplus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = jQuery(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt(jQuery('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal)) {
+            // Increment
+            jQuery('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+            // Otherwise put a 0 there
+            jQuery('input[name='+fieldName+']').val(0);
+        }
+    });
+    // This button will decrement the value till 0
+    jQuery(".qtyminus").click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = jQuery(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt(jQuery('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 0) {
+            // Decrement one
+            jQuery('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+            // Otherwise put a 0 there
+            jQuery('input[name='+fieldName+']').val(0);
+        }
+    });
+	
+	// Blog Page Toggle
+	jQuery('.blog-page').on('click', '.categories-toggle', function(){
+		jQuery('.menu-categories-container').stop(true, true).slideToggle('slow');
+		return false;
+		
+	});
+	jQuery('.site-branding').on('click', '.search-toggle', function(){
+		jQuery('.header-search').stop(true, true).slideToggle('slow');
+		return false;
+		
+	});
+	
+	jQuery('.isMobile #secondary').on('click', '.widget-title', function(){
+		jQuery(this).toggleClass('active');
+		jQuery(this).next('ul').slideToggle('fast');
+	});
+	jQuery('.menu-toggle').on('click', function(){
+		jQuery('body').addClass('menu-open');
+		jQuery('.main-navigation').slideDown('fast');
+		
+	});
+	jQuery('#menu-close').on('click', function(){
+		jQuery('.main-navigation').slideUp('fast', function(){
+			jQuery('body').removeClass('menu-open');	
+		});
+		
+	});
+	jQuery('.mobile-nav .menu-item-has-children > a').on('click', function(e){
+			e.preventDefault();
+			jQuery(this).toggleClass('active');
+			jQuery(this).next('ul').slideToggle('fast');
+
+		
+	});
+	
+});
