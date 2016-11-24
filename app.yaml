@@ -6,6 +6,9 @@ handlers:
 - url: .*
   script: main.app
 
+- url: /static/img
+  static_dir:images
+
 libraries:
 - name: jinja2
   version: "2.6"
